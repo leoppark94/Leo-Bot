@@ -1,2 +1,1 @@
-worker: python Leo_Bot.py
-worker: python twitch.py
+worker: python Leo_Bot.py; twitch.py;
