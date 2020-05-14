@@ -1,5 +1,6 @@
 import random
 import discord
+import os
 import openpyxl
 import requests
 import asyncio
@@ -67,4 +68,5 @@ async def on_ready():
 
         await asyncio.sleep(5)
 
-client.run("Njk1MDQ1MTYyMDU2OTQxNTg5.XoUeUg.UkvyKR153UbtnQG6CDnYWMhx1wc")
+access_token = os.environ["BOT_TOKEN"]            
+client.run(access_token)
