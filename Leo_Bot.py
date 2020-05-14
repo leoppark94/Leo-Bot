@@ -1,4 +1,5 @@
 import random
+import os
 import discord
 import openpyxl
 import requests
@@ -305,4 +306,6 @@ async def on_message(message):
         for i in range(0, 6):
             await message.channel.send(people[i+6] + "  ---->  " + teamname[i])
 
-client.run("Njk1MDQ1MTYyMDU2OTQxNTg5.XoUeUg.UkvyKR153UbtnQG6CDnYWMhx1wc")
+            
+access_token = os.environ["BOT_TOKEN"]            
+client.run(access_token)
