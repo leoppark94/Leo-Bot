@@ -46,6 +46,8 @@ async def on_message(message):
                            + '주사위, 연속주사위, 사진, 공지, 채금, 경고, 팀, 포지션, 그냥팀' + '\n'
                            + '세부적인 명령어 설명을 보려면 !도움 (해당명령어) 를 입력해주세요.' + '\n'
                            + '- 현재 지원하는 게임 : 리그오브레전드, 오버워치')
+    if message.content.startswith("!설명"):
+        await message.channel.send("해당 봇은 채널의 사용자들의 게이밍 및 채널 관리를 도와줄 수 있는 다기능 무료 봇입니다.이용자들에게 동료들과 팀을 나누고, 불건전한 멤버에게 제제를 가할 수 있습니다.관리자의 일부 권한을 봇에게 나누어 주어 공지사항 등을 멤버들에게 전송할 수 있습니다.간단한 대화식 인터페이스로 되어 있어 사용이 간단하고 쉽습니다.")
     if message.content.startswith("!도움 주사위"):
         await message.channel.send("랜덤으로 주사위를 돌려줘요")
     if message.content.startswith("!도움 연속주사위"):
