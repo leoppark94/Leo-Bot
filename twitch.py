@@ -33,7 +33,7 @@ async def on_ready():
         except:
             a = 0
 
-        await asyncio.sleep(3)
+        await asyncio.sleep(5)
 
 
 
