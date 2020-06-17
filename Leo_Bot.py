@@ -13,7 +13,7 @@ async def on_ready():
     print(client.user.id)
     print("Leo Bot 준비완료")
     #파이썬 파일 실행준비시 나올 문구
-    game = discord.Game("새로운 봇 제작중")
+    game = discord.Game("Leo BOT 구동중")
     #봇 실행 중 상태표시창에 나올 문구
     await client.change_presence(status=discord.Status.online, activity=game)
     #봇 상태 색상변경
