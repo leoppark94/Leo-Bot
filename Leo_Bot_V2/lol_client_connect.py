@@ -2,29 +2,12 @@ import lcu_driver
 import re
 import summoner_searcher as SS
 import team_spliter as TS
-import discord
-from discord.ext import commands
 
 
-# discordapp = commands.Bot(command_prefix='!')
-client = discord.Client()
+
+
 connector = lcu_driver.Connector()
 
-
-# fired when Discord API is ready to be used
-@client.event
-async def on_ready():
-    print(client.user.name, '디스코드에 연결됨')
-    await client.change_presence(status=discord.Status.online, activity=None)
-    print("ready")
-
-@client.event
-async def on_message(message):
-    if message.content.startswith('!안녕'):
-        channel = message.channel
-        await channel.send('안녕하세요, 살아났어요')
-
-# start the discord bot
 
 # fired when LCU API is ready to be used
 @connector.ready
@@ -53,8 +36,14 @@ async def player_score(connection, event):
             player_score.append(SS.searching_op_gg(summoner_name))
 
         team_result, team_gap = TS.team_spliter(player_score)
-        print(team_result)
-        print(team_gap)
+        print("-------------")
+        print("1팀")
+        print(team_result[0:5])
+        print("-------------")
+        print("2팀")
+        print(team_result[5:])
+        print("-------------")
+        print("점수차이 : ", team_gap)
 
 # starts the connector
 connector.start()

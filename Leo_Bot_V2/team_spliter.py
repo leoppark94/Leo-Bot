@@ -14,7 +14,7 @@ import random
 def team_spliter(test_data):
     temp_result = []
     team_gap = 500
-    for i in range(10):
+    for i in range(30):
         random.shuffle(test_data)
         team_1 = test_data[0:5]
         team_2 = test_data[5:10]
