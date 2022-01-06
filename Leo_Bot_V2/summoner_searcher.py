@@ -65,7 +65,7 @@ def tier_2_int(rank_name_str):
     challenger = re.findall("Challenger", rank_name_str)
 
     if unranked != []:
-        result = result + 20
+        result = result + 5
 
     if iron != []:
         temp = 5 - int(iron[0])
